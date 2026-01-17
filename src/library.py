@@ -29,15 +29,16 @@ class Library:
     
 
     def generate_report(self):
-        report=[]
-        for book_id in self.books:
-            book=self.books[book_id]
 
-            if book["borrowed"]:
-                status="borrowed"
-            else :
-                status="Available"
+            report=[]
+            for book_id in self.books:
+                book=self.books[book_id]
+
+                if book["borrowed"]:
+                    status="borrowed"
+                else :
+                    status="Available"
             
-        report.append((book_id,book["title"],status))
+            report.append((book_id,book["title"],status))
 
-    return report
+            return report
