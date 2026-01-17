@@ -26,3 +26,18 @@ class Library:
             raise ValueError("book not found")
 
         self.books[book_id]["borrowed"] = False
+    
+
+    def generate_report(self):
+        report=[]
+        for book_id in self.books:
+            book=self.books[book_id]
+
+            if book["borrowed"]:
+                status="borrowed"
+            else :
+                status="Available"
+            
+        report.append((book_id,book["title"],status))
+
+    return report
